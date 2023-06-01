@@ -13,9 +13,9 @@ device_model = 'Dummy_Device'
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
-push_interval = 3  # global interval
+push_interval = 10  # global interval
 interval = {
-    'Dummy_Sensor-I': 3,  # assign feature interval
+    'Dummy_Sensor-I': 10,  # assign feature interval
 }
 
 R0 = 3
@@ -58,6 +58,11 @@ def on_register(dan):
     time.sleep(10)
 
 def DummySensor_I():
+    
+    os.system("raspistill -o entry.png -w 640 -h 480 -t 1 -q 100")
+    os.system("python3 get_plate_B1.py")
+    
+    
     # function to get plate number
     f = open("pos.txt", "r")
     data = f.read()
