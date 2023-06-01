@@ -2,7 +2,7 @@ import sys, signal, time
 import subprocess
 import snowboydecoder
 import speech_recognition as sr
-from utilities import interrupt_callback
+from B-utilities import interrupt_callback
 from gtts import gTTS
 
 sys.stdout.reconfigure(encoding="utf-8")
