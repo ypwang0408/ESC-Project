@@ -13,9 +13,9 @@ device_model = 'Dummy_Device'
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
-push_interval = 3  # global interval
+push_interval = 10  # global interval
 interval = {
-    'Dummy_Sensor-I': 3,  # assign feature interval
+    'Dummy_Sensor-I': 10,  # assign feature interval
 }
 
 def on_register(dan):
