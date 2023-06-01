@@ -26,7 +26,7 @@ def DummySensor_I():
 # function to get plate number
     #num = get number 
     os.system("raspistill -o entry.png -w 640 -h 480 -t 1 -q 100")
-    os.system("python3 get_plate.py")
+    os.system("python3 C-get_plate.py")
     f = open("result.txt", "r")
     tmp = f.read().splitlines()
     if len(tmp) == 0:
