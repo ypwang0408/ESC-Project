@@ -45,7 +45,10 @@ def DummyControl_O(data: list):
         car_pos = f.read().strip().split('/')
         print(car_pos)
         f.close()
-        pos = car_pos.index(data[0])
+        try:
+            pos = car_pos.index(data[0])
+        except:
+            pass
         start_time = target.split('/')[1]
         park_time = int(time.time()) - int(start_time)
         print("Car " + data[0] + " has parked for " + str(park_time) + " seconds")
