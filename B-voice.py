@@ -33,8 +33,8 @@ def detect_callback():
             f.close()
             tts = gTTS(text="您的車牌號碼是"+text+"，您的愛車在"+pos+"號車位停了"+str(min)+"分"+str(sec)+"秒", lang='zh-TW')
             tts.save("./voice_files/info.mp3")
-            subprocess.run(["mpg123", "-d", "4", "-h" , "3", "-a", "hw:1", './voice_files/info.mp3'])
-            subprocess.run(["mpg123", "-d", "4", "-h" , "3", "-a", "hw:1", './voice_files/bye.mp3'])
+            subprocess.run(["mpg123", "-d", "4", "-h" , "3", "-a", "hw:2", './voice_files/info.mp3'])
+            subprocess.run(["mpg123", "-d", "4", "-h" , "3", "-a", "hw:2", './voice_files/bye.mp3'])
             break
         except sr.UnknownValueError:
             print("Google Speech Recognition could not understand audio")
