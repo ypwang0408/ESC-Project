@@ -40,7 +40,7 @@ def DummySensor_I():
     f.close()
     '''
     os.system("raspistill -o entry.png -w 640 -h 480 -t 1 -q 100")
-    os.system("python3 get_plate.py")
+    os.system("python3 A-get_plate.py")
     f = open("result.txt", "r")
     tmp = f.read().splitlines()
     if len(tmp) == 0:
