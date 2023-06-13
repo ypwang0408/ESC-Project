@@ -62,10 +62,10 @@ def DummyControl_O(data: list):
                 if data[0] not in i:
                     f.write(i + '\n')
             f.close()
-            print("Car " + data[0] + "leaving")
+            print("Car " + data[0] + " leaving")
             
             f = open("log.txt", "a")
-            f.write("Car " + data[0] + "leaving\n")
+            f.write("Car " + data[0] + " leaving\n")
             f.close()            
         else:
             response = '0'

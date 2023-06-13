@@ -2,11 +2,10 @@ import random
 import time
 import sys
 from iottalkpy.dan import NoData
-
+print("test")
 api_url = 'https://iottalk2.tw/csm' 
 
 device_model = 'Dummy_Device'
-
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
@@ -14,6 +13,7 @@ push_interval = 5
 interval = {
     'Dummy_Sensor-I': 5, 
 }
+
 
 allow_in = False
 f = open("num_in.txt", "w")
@@ -23,6 +23,9 @@ f = open("log.txt", "w")
 f.write("")
 f.close()
 f = open("inside.txt", "w")
+f.write("")
+f.close()
+f = open("can_leave.txt", "w")
 f.write("")
 f.close()
 
