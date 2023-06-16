@@ -12,9 +12,9 @@ device_model = 'Dummy_Device'
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
-push_interval = 5  # global interval
+push_interval = 2  # global interval
 interval = {
-    'Dummy_Sensor-I': 5,  # assign feature interval
+    'Dummy_Sensor-I': 2,  # assign feature interval
 }
 
 

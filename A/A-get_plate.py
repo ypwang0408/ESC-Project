@@ -19,7 +19,7 @@ with open('entry.png', 'rb') as fp:
         'https://api.platerecognizer.com/v1/plate-reader/',
         data=dict(regions=regions),  # Optional
         files=dict(upload=fp),
-        headers={'Authorization': 'Token 91d4a6a4fdf8e7ae93abe8ceaae7b1b4d046be7a'})
+        headers={'Authorization': 'Token 96317985db62da5e9ac0afb7d2d82c7fc7622821'})
 #pprint(response.json())
 try:
     plate = response.json()['results'][0]['plate']    
