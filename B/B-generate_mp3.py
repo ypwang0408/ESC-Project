@@ -3,7 +3,7 @@ import argparse       #With this module, you can convert text to speech and save
 import os
 
 parser = argparse.ArgumentParser()
-parser.add_argument('--text', type=str, default='感謝您的惠顧，歡迎您再次光臨')
+parser.add_argument('--text', type=str, default='查無此車牌')
 parser.add_argument('--file_o', type=str, default='book.mp3')
 parser.add_argument('--lang', type=str, default='zh-TW')
 opt = parser.parse_args()

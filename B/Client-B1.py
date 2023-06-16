@@ -1,7 +1,7 @@
 # Run on middle raspberry pi
 import random
 import time
-import sys
+import sys,os
 import signal
 from iottalkpy.dan import NoData
 import RPi.GPIO as GPIO
@@ -13,19 +13,21 @@ device_model = 'Dummy_Device'
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
-push_interval = 10  # global interval
+push_interval = 2  # global interval
 interval = {
-    'Dummy_Sensor-I': 10,  # assign feature interval
+    'Dummy_Sensor-I': 2,  # assign feature interval
 }
 
-R0 = 3
-G0 = 5
+GPIO.setwarnings(False)
+
+R2 = 3
+G2 = 5
 
 R1 = 11
 G1 = 13
 
-R2 = 19
-G2 = 21
+R0 = 19
+G0 = 21
 
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(R0, GPIO.OUT)

@@ -13,9 +13,9 @@ device_model = 'Dummy_Device'
 idf_list = ['DummySensor-I']
 odf_list = ['DummyControl-O']
 
-push_interval = 10  # global interval
+push_interval = 3  # global interval
 interval = {
-    'Dummy_Sensor-I': 10,  # assign feature interval
+    'Dummy_Sensor-I': 3,  # assign feature interval
 }
 
 def on_register(dan):
@@ -48,6 +48,10 @@ def DummySensor_I():
     return NoData
 
 def DummyControl_O(data: list):
-    print(data[0])
+    print('info:', data[0])
+    if data[0]:
+        f = open('info.txt', "w")
+        f.write(data[0])
+        f.close()
 
             
