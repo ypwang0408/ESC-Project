@@ -1,0 +1,2 @@
+1. 把r.pause_threshold的值設大一點，讓他不要太容易以為我斷句了
+2. 按照指定的規格錄製三次喚醒詞，丟到http://snowboy.ricelee.com/kitty.html裡面訓練，再下載到raspi中並在跑demo.py的時候後面加上剛剛hotword.pmdl的位置，就可以使用自定義的喚醒詞了。
